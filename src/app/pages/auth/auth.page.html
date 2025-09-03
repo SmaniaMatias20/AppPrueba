@@ -7,7 +7,12 @@
   </ion-segment>
 
   <!-- Formularios -->
-  <app-login *ngIf="selectedForm === 'login'" (payload)="onLogin($event)"></app-login>
-  <app-register *ngIf="selectedForm === 'register'" (payload)="onRegister($event)"></app-register>
+  @if (selectedForm === 'login') {
+  <app-login (payload)="onLogin($event)"></app-login>
+  }
+  @if (selectedForm === 'register') {
+  <app-register (payload)="onRegister($event)"></app-register>
+  }
+
 
 </ion-content>

@@ -28,19 +28,21 @@ form {
     }
 }
 
-/* Estilos para inputs */
+/* Ion Item fix para inputs */
 ion-item {
     --background: transparent;
     --highlight-color-focused: #b0b0b0;
     --highlight-height: 2px;
     --color: #f0f0f0;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    margin-bottom: 1.5rem;
+    border: none;
+    /* quitar border-bottom manual */
 }
 
-/* Label */
+/* Label flotante */
 ion-label {
-    color: #aaa;
+    color: #aaa !important;
     font-size: 0.9rem;
 }
 
@@ -50,6 +52,7 @@ ion-input {
     font-size: 1rem;
     padding: 0.5rem 0;
 }
+
 
 /* Mensajes de error */
 div {
