@@ -16,7 +16,7 @@ import { Auth } from '../../services/auth/auth';
   imports: [CommonModule, FormsModule, LoginComponent, IonicModule, RegisterComponent],
 })
 export class AuthPage implements OnInit {
-
+  selectedForm: 'login' | 'register' = 'login'; // por defecto se muestra login
   email: string = '';
   password: string = '';
   firstName: string = '';

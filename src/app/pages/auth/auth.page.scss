@@ -1,0 +1,48 @@
+/* auth.scss */
+
+/* Fondo general */
+:host {
+    display: block;
+    height: 100%;
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    color: #f0f0f0;
+}
+
+/* Contenido con padding */
+ion-content {
+    --background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Segmento (selector login/registro) */
+ion-segment {
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Botones del segmento */
+ion-segment-button {
+    --color: #aaa;
+    --color-checked: #fff;
+    --background: transparent;
+    --background-checked: linear-gradient(135deg, #666, #444);
+    font-weight: 600;
+    text-transform: none;
+    font-size: 1rem;
+}
+
+/* Formularios hijos (login y registro) */
+app-login,
+app-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

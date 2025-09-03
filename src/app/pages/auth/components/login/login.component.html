@@ -1,10 +1,10 @@
-<h1>Login</h1>
-
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1>Login</h1>
 
   <!-- Email o Usuario -->
   <ion-item lines="none">
-    <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input formControlName="email" type="text"></ion-input>
   </ion-item>
   @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
   <div>Campo obligatorio</div>
@@ -12,10 +12,11 @@
 
   <!-- Password -->
   <ion-item lines="none">
-    <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
   </ion-item>
   @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
-  <div class="text-red-500 text-sm">Mínimo 8 caracteres</div>
+  <div>Mínimo 8 caracteres</div>
   }
 
   <!-- Botón -->

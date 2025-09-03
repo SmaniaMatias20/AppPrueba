@@ -1,8 +1,13 @@
-<ion-content>
+<ion-content class="ion-padding">
 
-  <app-login (payload)="onLogin($event)"></app-login>
+  <!-- Botones para elegir -->
+  <ion-segment [(ngModel)]="selectedForm">
+    <ion-segment-button value="login">Login</ion-segment-button>
+    <ion-segment-button value="register">Registro</ion-segment-button>
+  </ion-segment>
 
-
-  <app-register (payload)="onRegister($event)"></app-register>
+  <!-- Formularios -->
+  <app-login *ngIf="selectedForm === 'login'" (payload)="onLogin($event)"></app-login>
+  <app-register *ngIf="selectedForm === 'register'" (payload)="onRegister($event)"></app-register>
 
 </ion-content>
