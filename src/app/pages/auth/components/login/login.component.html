@@ -1,0 +1,26 @@
+<h1>Login</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <!-- Email o Usuario -->
+  <ion-item lines="none">
+    <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+  </ion-item>
+  @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+  <div>Campo obligatorio</div>
+  }
+
+  <!-- Password -->
+  <ion-item lines="none">
+    <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+  </ion-item>
+  @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+  <div class="text-red-500 text-sm">Mínimo 8 caracteres</div>
+  }
+
+  <!-- Botón -->
+  <ion-button expand="block" type="submit" [disabled]="loginForm.invalid">
+    Iniciar sesión
+  </ion-button>
+
+</form>
