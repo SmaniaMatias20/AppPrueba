@@ -1,11 +1,15 @@
-<ion-content [fullscreen]="true">
+<div class="page-wrapper">
 
   <!-- Botones para elegir -->
   <div class="segment-wrapper">
-    <ion-segment [(ngModel)]="selectedForm" color="primary">
-      <ion-segment-button value="login">Login</ion-segment-button>
-      <ion-segment-button value="register">Registro</ion-segment-button>
-    </ion-segment>
+    <div class="segment">
+      <button [class.active]="selectedForm === 'login'" (click)="selectedForm = 'login'">
+        Login
+      </button>
+      <button [class.active]="selectedForm === 'register'" (click)="selectedForm = 'register'">
+        Registro
+      </button>
+    </div>
   </div>
 
   <!-- Formularios -->
@@ -16,5 +20,4 @@
   <app-register (payload)="onRegister($event)"></app-register>
   }
 
-
-</ion-content>
+</div>

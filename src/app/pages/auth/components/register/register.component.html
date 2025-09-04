@@ -2,28 +2,22 @@
   <h1>Registro</h1>
 
   <!-- Nombre -->
-  <ion-item lines="none">
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input formControlName="firstName" type="text"></ion-input>
-  </ion-item>
+  <label for="firstName">Nombre</label>
+  <input id="firstName" formControlName="firstName" type="text" />
   @if (registerForm.get('firstName')?.touched && registerForm.get('firstName')?.invalid) {
   <div>Campo obligatorio</div>
   }
 
   <!-- Apellido -->
-  <ion-item lines="none">
-    <ion-label position="floating">Apellido</ion-label>
-    <ion-input formControlName="lastName" type="text"></ion-input>
-  </ion-item>
+  <label for="lastName">Apellido</label>
+  <input id="lastName" formControlName="lastName" type="text" />
   @if (registerForm.get('lastName')?.touched && registerForm.get('lastName')?.invalid) {
   <div>Campo obligatorio</div>
   }
 
   <!-- Email -->
-  <ion-item lines="none">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input formControlName="email" type="email"></ion-input>
-  </ion-item>
+  <label for="email">Email</label>
+  <input id="email" formControlName="email" type="email" />
   @if (registerForm.get('email')?.touched && registerForm.get('email')?.hasError('required')) {
   <div>Campo obligatorio</div>
   } @else if (registerForm.get('email')?.touched && registerForm.get('email')?.hasError('email')) {
@@ -31,10 +25,8 @@
   }
 
   <!-- Edad -->
-  <ion-item lines="none">
-    <ion-label position="floating">Edad</ion-label>
-    <ion-input formControlName="age" type="number"></ion-input>
-  </ion-item>
+  <label for="age">Edad</label>
+  <input id="age" formControlName="age" type="number" />
   @if (registerForm.get('age')?.touched && registerForm.get('age')?.hasError('required')) {
   <div>Campo obligatorio</div>
   } @else if (registerForm.get('age')?.touched && registerForm.get('age')?.hasError('min')) {
@@ -42,26 +34,21 @@
   }
 
   <!-- Contraseña -->
-  <ion-item lines="none">
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input formControlName="password" type="password"></ion-input>
-  </ion-item>
+  <label for="password">Contraseña</label>
+  <input id="password" formControlName="password" type="password" />
   @if (registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
   <div>Mínimo 8 caracteres</div>
   }
 
   <!-- Confirmar contraseña -->
-  <ion-item lines="none">
-    <ion-label position="floating">Confirmar contraseña</ion-label>
-    <ion-input formControlName="confirmPassword" type="password"></ion-input>
-  </ion-item>
+  <label for="confirmPassword">Confirmar contraseña</label>
+  <input id="confirmPassword" formControlName="confirmPassword" type="password" />
   @if (registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.invalid) {
   <div>Contraseña no coincide</div>
   }
 
   <!-- Botón -->
-  <ion-button expand="block" type="submit">
+  <button type="submit">
     Registrarse
-  </ion-button>
-
+  </button>
 </form>
