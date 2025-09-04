@@ -29,25 +29,16 @@ form {
 }
 
 /* Ion Item fix para inputs */
-ion-item {
-    --background: transparent;
-    --highlight-color-focused: #b0b0b0;
-    --highlight-height: 2px;
-    --color: #f0f0f0;
 
-    margin-bottom: 1.5rem;
-    border: none;
-    /* quitar border-bottom manual */
-}
 
 /* Label flotante */
-ion-label {
+label {
     color: #aaa !important;
     font-size: 0.9rem;
 }
 
 /* Input */
-ion-input {
+input {
     color: #f5f5f5;
     font-size: 1rem;
     padding: 0.5rem 0;
@@ -63,7 +54,7 @@ div {
 }
 
 /* Botón */
-ion-button {
+button {
     margin-top: 1rem;
     --background: linear-gradient(135deg, #666, #444);
     --background-activated: linear-gradient(135deg, #555, #333);

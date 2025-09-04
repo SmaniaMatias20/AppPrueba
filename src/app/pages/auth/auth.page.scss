@@ -1,6 +1,6 @@
 /* auth.scss */
 
-/* Fondo general */
+/* 1. Fondo general */
 :host {
     display: block;
     height: 100%;
@@ -8,27 +8,34 @@
     color: #f0f0f0;
 }
 
-/* Contenido con padding */
+/* 2. Contenido principal */
 ion-content {
     --background: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+
+    /* Evita flex en ion-content directamente en mobile */
+    padding-top: 2rem;
+    display: block;
 }
 
-/* Segmento (selector login/registro) */
-ion-segment {
+/* 3. Contenedor del segmento centrado */
+.segment-wrapper {
+    display: flex;
+    justify-content: center;
     margin: 2rem 0;
+}
+
+/* 4. Estilo visual del segmento */
+ion-segment {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     overflow: hidden;
-    width: 90%;
+    width: auto;
+    /* auto en lugar de 90% para que se ajuste al contenido */
     max-width: 400px;
 }
 
-/* Botones del segmento */
+/* 5. Botones del segmento */
 ion-segment-button {
     --color: #aaa;
     --color-checked: #fff;
@@ -37,12 +44,15 @@ ion-segment-button {
     font-weight: 600;
     text-transform: none;
     font-size: 1rem;
+    margin: 0 4px;
+    /* espacio entre botones */
 }
 
-/* Formularios hijos (login y registro) */
+/* 6. Formularios hijos (login y register) centrados */
 app-login,
 app-register {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
