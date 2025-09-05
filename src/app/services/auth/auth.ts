@@ -120,11 +120,6 @@ export class Auth {
       return { success: false, message: 'Registro fallido al guardar los datos.' };
     }
 
-    // const loginResult = await this.login(email, password);
-    // if (!loginResult.success) {
-    //   return { success: false, message: 'Usuario registrado pero no pudo iniciar sesión automáticamente.' };
-    // }
-
     return {
       success: true,
       message: 'Registro y login exitoso.',

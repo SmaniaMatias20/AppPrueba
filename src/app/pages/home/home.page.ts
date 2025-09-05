@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { RouterLink } from '@angular/router';
+
+import { Auth } from 'src/app/services/auth/auth';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonicModule, RouterLink],
+  imports: [IonicModule],
 })
 export class HomePage {
-  constructor() { }
+  constructor(private auth: Auth) { }
+
+  logout() {
+    this.auth.logout();
+  }
 }
