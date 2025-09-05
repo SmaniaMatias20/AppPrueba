@@ -35,10 +35,12 @@ export class LoginComponent {
     }
   }
 
-  onFastLogin() {
-    const email = "matias@gmail.com";
-    const password = "123456789";
-    const payload = { email: email, password }
-    this.payload.emit(payload);
+  onFastLogin(email: string, password: string) {
+    try {
+      const payload = { email: email, password };
+      this.payload.emit(payload);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
