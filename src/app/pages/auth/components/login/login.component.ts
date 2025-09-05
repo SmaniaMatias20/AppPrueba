@@ -34,4 +34,11 @@ export class LoginComponent {
       this.loginForm.markAllAsTouched();
     }
   }
+
+  onFastLogin() {
+    const email = "matias@gmail.com";
+    const password = "123456789";
+    const payload = { email: email, password }
+    this.payload.emit(payload);
+  }
 }
