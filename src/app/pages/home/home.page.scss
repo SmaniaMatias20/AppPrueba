@@ -1,16 +1,18 @@
-/* Fondo general en degradado gris */
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  /* splash arriba, contenido debajo */
   align-items: center;
   min-height: 100vh;
   text-align: center;
   background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
   color: #f1f1f1;
   font-family: "Segoe UI", sans-serif;
+  padding: 2rem;
 
   h1 {
+    margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     color: #e0e0e0;
@@ -20,12 +22,17 @@
     margin-bottom: 2rem;
     font-size: 1.1rem;
     color: #cccccc;
+    max-width: 500px;
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     background-color: #555;
     color: #f1f1f1;
     font-size: 1rem;
@@ -38,6 +45,88 @@
 
     &:active {
       background-color: #999;
+    }
+
+    .material-icons {
+      font-size: 20px;
+    }
+  }
+
+  .splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    /* tamaño reducido para dejar espacio al contenido */
+    width: 100%;
+    max-width: 400px;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    .name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      animation: slideDown 1s ease-out;
+    }
+
+    .icon {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      /* redondea la foto */
+      object-fit: cover;
+      /* ajusta la imagen al contenedor */
+      margin: 1rem 0;
+      animation: scaleUp 1s ease-out;
+    }
+
+
+    .divider {
+      width: 80%;
+      height: 2px;
+      background: #fff;
+      animation: slideUp 1s ease-out;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleUp {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }
