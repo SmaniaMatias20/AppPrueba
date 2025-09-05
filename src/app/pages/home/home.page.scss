@@ -58,10 +58,9 @@
     justify-content: space-between;
     align-items: center;
     height: 300px;
-    /* tamaño reducido para dejar espacio al contenido */
     width: 100%;
     max-width: 400px;
-    background: #1a1a1a;
+    background: #171c29;
     color: #fff;
     border-radius: 16px;
     padding: 1.5rem;
@@ -91,6 +90,13 @@
       height: 2px;
       background: #fff;
       animation: slideUp 1s ease-out;
+    }
+
+    .comision {
+      font-size: 0.8rem;
+      color: #ccc;
+      animation: slideDown 1s ease-out;
+      margin-top: 0.5rem;
     }
   }
 
