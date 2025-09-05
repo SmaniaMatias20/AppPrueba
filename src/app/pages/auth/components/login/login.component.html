@@ -1,28 +1,19 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <h1>Login</h1>
-
-  <!-- Email o Usuario -->
 
   <label position="floating">Email</label>
   <input formControlName="email" type="text">
-
 
   @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
   <div>Campo obligatorio</div>
   }
 
-  <!-- Password -->
-
   <label position="floating">Contraseña</label>
   <input formControlName="password" type="password">
-
-
 
   @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
   <div>Mínimo 8 caracteres</div>
   }
 
-  <!-- Botón -->
   <button expand="block" type="submit">
     Iniciar sesión
   </button>

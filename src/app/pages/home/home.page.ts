@@ -13,7 +13,7 @@ import { Auth } from 'src/app/services/auth/auth';
 export class HomePage {
   constructor(private auth: Auth) { }
 
-  logout() {
+  onLogout() {
     this.auth.logout();
   }
 }

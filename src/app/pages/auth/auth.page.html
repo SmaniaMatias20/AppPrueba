@@ -1,18 +1,16 @@
 <div class="page-wrapper">
 
-  <!-- Botones para elegir -->
   <div class="segment-wrapper">
     <div class="segment">
       <button [class.active]="selectedForm === 'login'" (click)="selectedForm = 'login'">
-        Login
+        <span class="material-icons">login</span>
       </button>
       <button [class.active]="selectedForm === 'register'" (click)="selectedForm = 'register'">
-        Registro
+        <span class="material-icons">person_add</span>
       </button>
     </div>
   </div>
 
-  <!-- Formularios -->
   @if (selectedForm === 'login') {
   <app-login (payload)="onLogin($event)"></app-login>
   }
